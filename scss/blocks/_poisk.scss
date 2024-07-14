@@ -1,0 +1,128 @@
+.poisk-section {
+    padding-bottom: 67px;
+}
+.poisk {
+    @include display($items:center, $space:space-between, $gap:0px);
+}
+.poisk__list {
+    width: 100%;
+    padding: 40px 0 56px;
+    @include display($items:center, $space:space-between, $gap:0px);
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+}
+.poisk__item{
+    width: 391px;
+}
+.poisk__item:first-child {
+    padding: 0 82px 16px 80px;
+}
+.poisk__item:nth-child(2) {
+    margin-left: 23px;
+    padding: 0 116px 16px 64px;
+    border-left: 1px solid $clr-line;
+}
+.poisk__item:nth-child(3) {
+    padding: 0 116px 16px 64px;
+    border-left: 1px solid $clr-line;
+}
+.poisk__item-img {
+    margin-bottom: 24px;
+}
+.poisk__item-title {
+    @include textStyle($FS:20px, $FW:600, $LH:27px, $CLR:$clr-title, $CASE:inherit, $MB:16px);
+}
+.poisk__item-text {
+    @include textStyle($FS:16px, $FW:400, $LH:24px, $CLR:$clr-text, $CASE:inherit, $MB:0px);
+}
+
+
+// ----------Tablet------
+@media (max-width:1057px){
+    .poisk-section {
+        padding-bottom: 97px;
+    }
+    .poisk__list {
+        padding: 0;
+        width: 100%;
+        border: none;
+        border-radius: 0px;
+        box-shadow: none;
+        @include display($items:center, $space:start, $gap:0px);
+        flex-direction: column;
+    }
+    .poisk__item{
+        width: 100%;
+        @include display($items:center, $space:start, $gap:32px);
+        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+    }
+    .poisk__item:first-child {
+        padding: 40px 140px 40px 32px;
+    }
+    .poisk__item:nth-child(2) {
+        padding: 40px 140px 40px 32px;
+        margin-left: 0;
+    }
+    .poisk__item:nth-child(3) {
+        padding: 40px 140px 40px 32px;
+        border-left: 1px solid $clr-line;
+    }
+    .poisk__item-content{
+        width: 397px;
+    }
+}
+
+
+// ------------Mobile-------
+
+@media (max-width:565px){
+    .poisk-section {
+        padding-bottom: 34px;
+    }
+    .poisk__list {
+        padding: 0;
+        width: 100%;
+        @include display($items:center, $space:start, $gap:24px);
+        flex-direction: column;
+        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+    }
+    .poisk__item{
+        width: 100%;
+        @include display($items:start, $space:start, $gap:16px);
+        flex-direction: column;
+        border: none;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+    .poisk__item:first-child {
+        padding: 24px 27px 0 32px;
+        border: none;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+    .poisk__item:nth-child(2) {
+        padding: 0 27px 0 32px;
+        margin-left: 0;
+        border: none;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+    .poisk__item:nth-child(3) {
+        padding: 0 27px 32px 32px;
+        border-left: 1px solid $clr-line;
+        border: none;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+    .poisk__item-content{
+        width: 100%;
+    }
+    .poisk__item-title {
+        @include textStyle($FS:18px, $FW:600, $LH:24px, $CLR:$clr-title, $CASE:inherit, $MB:12px);
+    }
+    .poisk__item-text {
+        @include textStyle($FS:15px, $FW:400, $LH:22px, $CLR:$clr-text, $CASE:inherit, $MB:0px);
+    }
+}

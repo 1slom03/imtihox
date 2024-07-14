@@ -1,0 +1,91 @@
+.hero-section {
+    padding: 109px 0 67px;
+}
+.hero {
+    @include display($items:center, $space:space-between, $gap:0px);
+}
+.hero__content-wrapper {
+    width: 507px;
+}
+.hero__title {
+    @include textStyle($FS:52px, $FW:600, $LH:65px, $CLR:$clr-title, $CASE:inherit, $MB:40px);
+}
+.hero__text {
+    @include textStyle($FS:16px, $FW:400, $LH:24px, $CLR:$clr-text, $CASE:inherit, $MB:40px);
+}
+.hero__btn {
+    @include ButtonStyle($btn-w:123px,$btn-pb:0px,$btn-bg-clr:white,$btn-bg-radius:0px, $btn-fs:16px, $btn-fw:700, $btn-lh:24px, $btn-clr:$clr-title, $btn-case:unset);
+    border-color: transparent;
+    border: none;
+    border-bottom: 3px solid $clr-border;
+
+    &:hover{
+        border-color: $clr-title;
+    }
+}
+.hero__tablet-img {
+    display: none;
+}
+.hero__mobile-img{
+    display: none;
+}
+
+// --------------Tablet-------
+
+@media(max-width:1100px){
+    .hero-section {
+        padding: 117px 0 41px;
+    }
+    .hero {
+        @include display($items:center, $space:start, $gap:73px);
+        flex-direction: column;
+    }
+    .hero__content-wrapper {
+        width: 100%;
+        text-align: center;
+    }
+    .hero__title {
+        @include textStyle($FS:44px, $FW:600, $LH:55px, $CLR:$clr-title, $CASE:inherit, $MB:49px);
+    }
+    .hero__text {
+        @include textStyle($FS:16px, $FW:400, $LH:24px, $CLR:$clr-text, $CASE:inherit, $MB:44px);
+    }
+    .hero__decktop-img{
+        display: none;
+    }
+    .hero__tablet-img{
+        max-width: 100%;
+        display: block;
+    }
+    
+}
+
+// --------------Mobile-----------
+
+@media(max-width:500px){
+    .hero-section {
+        padding: 75px 0 56px;
+    }
+    .hero {
+        @include display($items:start, $space:start, $gap:40px);
+        flex-direction: column;
+    }
+    .hero__content-wrapper {
+        max-width: 100%;
+        text-align: left;
+    }
+    .hero__title {
+        width: 100%;
+        @include textStyle($FS:44px, $FW:600, $LH:55px, $CLR:$clr-title, $CASE:inherit, $MB:32px);
+    }
+    .hero__text {
+        @include textStyle($FS:16px, $FW:400, $LH:24px, $CLR:$clr-text, $CASE:inherit, $MB:32px);
+    }
+    .hero__tablet-img{
+        display: none;
+    }
+    .hero__mobile-img{
+        width: 100%;
+        display: block;
+    }
+}

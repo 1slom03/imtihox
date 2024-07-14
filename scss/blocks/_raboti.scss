@@ -1,0 +1,119 @@
+.raboti-section {
+    padding-bottom: 80px;
+}
+.raboti__title {
+    @include textStyle($FS:48px, $FW:600, $LH:60px, $CLR:$clr-title, $CASE:inherit, $MB:32px);
+}
+.raboti__text {
+    max-width: 495px;
+    @include textStyle($FS:16px, $FW:400, $LH:24px, $CLR:$clr-text, $CASE:inherit, $MB:56px);
+}
+.raboti__list {
+    @include display($items:center, $space:start, $gap:30px);
+}
+.raboti__item {
+    max-width: 393px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+}
+.raboti__item-img {
+    margin-bottom: 24px;
+}
+.raboti__item-tablet-img{
+    display: none;
+}
+.raboti__item-mobile-img{
+    display: none;
+}
+.raboti__item-title {
+    @include textStyle($FS:20px, $FW:600, $LH:27px, $CLR:$clr-title, $CASE:inherit, $MB:16px);
+    padding-left: 32px;
+}
+.raboti__item-text {
+    padding-left: 32px;
+    @include textStyle($FS:16px, $FW:400, $LH:24px, $CLR:$clr-text, $CASE:inherit, $MB:32px);
+}
+.raboti__item-btn {
+    margin:0 0 32px 32px;
+    @include ButtonStyle($btn-w:89px,$btn-pb:0px,$btn-bg-clr:white,$btn-bg-radius:0px, $btn-fs:16px, $btn-fw:700, $btn-lh:24px, $btn-clr:$clr-title, $btn-case:unset);
+    border-color: transparent;
+    border: none;
+    border-bottom: 3px solid $clr-border;
+
+    &:hover{
+        border-color: $clr-title;
+    }
+}
+
+// ---------Tablet----------
+
+@media (max-width:850px){
+    .raboti-section{
+        padding-bottom: 44px;
+    }
+    .raboti__title{
+        @include textStyle($FS:44px, $FW:600, $LH:55px, $CLR:$clr-title, $CASE:inherit, $MB:32px);
+    }
+    .raboti__text{
+        @include textStyle($FS:16px, $FW:400, $LH:24px, $CLR:$clr-text, $CASE:inherit, $MB:40px);
+    }
+    .raboti__list{
+        @include display($items:start, $space:start, $gap:30px);
+        flex-direction: column;
+    }
+    .raboti__item{
+        max-width: 100%;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.12);
+        border-radius: 10px;
+    }
+    .raboti__item:nth-child(3){
+        display: none;
+    }
+    .raboti__item-img{
+        display: none;
+    }
+    .raboti__item-tablet-img{
+        max-width: 100%;
+        display: block;
+        margin-bottom: 24px;
+    }
+    
+}
+
+// ---------Mobile----------
+
+@media (max-width:445px){
+    .raboti-section{
+        padding-bottom: 28px;
+    }
+    .raboti__title{
+        @include textStyle($FS:28px, $FW:600, $LH:35px, $CLR:$clr-title, $CASE:inherit, $MB:24px);
+    }
+    .raboti__text{
+        @include textStyle($FS:15px, $FW:400, $LH:22px, $CLR:$clr-text, $CASE:inherit, $MB:32px);
+    }
+    .raboti__item{
+        max-width: 345px;
+    }
+    .raboti__item:nth-child(2){
+        display: none;
+    }
+    .raboti__item-tablet-img{
+        display: none;
+    }
+    .raboti__item-mobile-img{
+        display: block;
+        margin-bottom: 24px;
+    }
+    .raboti__item-title{
+        @include textStyle($FS:18px, $FW:600, $LH:24px, $CLR:$clr-title, $CASE:inherit, $MB:16px);
+        padding-left: 24px;
+    }
+    .raboti__item-text{
+        @include textStyle($FS:15px, $FW:400, $LH:22px, $CLR:$clr-text, $CASE:inherit, $MB:24px);
+        padding-left: 24px;
+    }
+    .raboti__item-btn{
+        margin: 0 0 24px 24px;
+    }
+}

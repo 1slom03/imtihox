@@ -1,0 +1,200 @@
+.site-footer {
+    padding: 80px 0 0 29px;
+    max-width: 100%;
+    background-color: $footer-bg;
+}
+.footer {
+    @include display($items:start, $space:space-between, $gap:0px);
+    margin-bottom: 80px;
+}
+.footer__logo {
+    margin-top: -21px;
+}
+.footer__link-wrapper {
+    height: 195px;
+    @include display($items:start, $space:start, $gap:0px);
+    flex-direction: column;
+    flex-wrap: wrap;
+    column-gap: 97px;
+    row-gap: 25px;
+}
+.footer__link {
+    @include textStyle($FS:13px, $FW:500, $LH:19px, $CLR:$color-white, $CASE:inherit, $MB:0px);
+}
+.footer__link:nth-child(3){
+    padding: 8px 0;
+}
+.footer__link:nth-child(4){
+    padding: 8px 0;
+}
+.footer__contact-wrapper {
+    @include display($items:start, $space:start, $gap:32px);
+    flex-direction: column;
+}
+.footer__profile-wrapper {
+    @include display($items:start, $space:start, $gap:14px);
+}
+.footer__contact-phone {
+    @include textStyle($FS:13px, $FW:600, $LH:19px, $CLR:$color-white, $CASE:inherit, $MB:0px);
+}
+.footer__btn {
+    @include display($items:center, $space:start, $gap:14px);
+    position: relative;
+    padding: 8px 11px;
+    border: 1px solid $footer-btn;
+    background-color: $footer-btn;
+    transition: all 0.3s linear;
+
+    &:hover{
+        background-color: transparent;
+        color: $footer-bg;
+    }
+}
+.footer__btn-title{
+    @include textStyle($FS:13px, $FW:600, $LH:19px, $CLR:$color-white, $CASE:inherit, $MB:0px);
+}
+.footer__text {
+    @include textStyle($FS:13px, $FW:600, $LH:19px, $CLR:rgba(255, 255, 255, 1), $CASE:inherit, $MB:0px);
+    padding-bottom: 29px;
+    text-align: center;
+    opacity: 0.7;
+}
+
+@media (max-width:850px) {
+    .site-footer{
+        padding: 41px 0 0 0;
+    }
+    .footer{
+    @include display($items:start, $space:start, $gap:0px);
+    }
+    .footer__logo{
+        width: 93px;
+        height: 46px;
+        margin-right: 200px;
+    }
+    .footer__link-wrapper {
+        height: 130px;
+        margin-right: 50px;
+        @include display($items:start, $space:start, $gap:0px);
+        flex-direction: column;
+        flex-wrap: wrap;
+        column-gap: 74px;
+        row-gap: 13px;
+    }
+    .footer__link {
+        @include textStyle($FS:8px, $FW:500, $LH:12px, $CLR:$color-white, $CASE:inherit, $MB:0px);
+    }
+    .footer__link:nth-child(3){
+        padding: 5px 0;
+    }
+    .footer__link:nth-child(4){
+        padding: 5px 0;
+    }
+    .footer__contact-wrapper {
+        @include display($items:start, $space:start, $gap:21px);
+    }
+    .footer__profile-wrapper {
+        @include display($items:start, $space:start, $gap:7px);
+    }
+    .footer__contact-phone {
+        @include textStyle($FS:8px, $FW:600, $LH:12px, $CLR:$color-white, $CASE:inherit, $MB:0px);
+    }
+    .footer__btn {
+        max-width: 100%;
+        @include display($items:center, $space:start, $gap:19px);
+        position: relative;
+        padding: 5px 8px;
+        border: 1px solid $footer-btn;
+        background-color: $footer-btn;
+        transition: all 0.3s linear;
+    
+        &:hover{
+            background-color: transparent;
+            color: $footer-bg;
+        }
+    }
+    .footer__btn-title{
+        max-width: 100%;
+        @include textStyle($FS:8px, $FW:600, $LH:12px, $CLR:$color-white, $CASE:inherit, $MB:0px);
+    }
+    
+}
+
+@media (max-width:655px) {
+    .site-footer{
+        padding: px 0 0 0;
+    }
+    .footer{
+        margin-left: 45px;
+        margin-bottom: 16px;
+        @include display($items:start, $space:start, $gap:0px);
+        flex-direction: column;
+    }
+    .footer__logo{
+        margin-bottom: 23px;
+    }
+    .footer__logo-img{
+        margin-top: 0;
+        width: 61px;
+        height: 33px;
+        margin-right: 0;
+    }
+    .footer__link-wrapper {
+        height: 165px;
+        margin-bottom: 17px;
+        @include display($items:start, $space:start, $gap:0px);
+        flex-direction: column;
+        flex-wrap: wrap;
+        column-gap: 59px;
+        row-gap: 26px;
+    }
+    .footer__link {
+        @include textStyle($FS:8px, $FW:500, $LH:12px, $CLR:$color-white, $CASE:inherit, $MB:0px);
+    }
+    .footer__link:nth-child(3){
+        padding: 9px 0;
+    }
+    .footer__link:nth-child(4){
+        padding: 9px 0;
+    }
+    .footer__contact-wrapper {
+        @include display($items:start, $space:start, $gap:21px);
+    }
+    .footer__profile-wrapper {
+        @include display($items:start, $space:start, $gap:4px);
+        margin-bottom: 63px;
+    }
+    .footer__profile-img{
+        width: 9px;
+        height: 9px;    
+    }
+    .footer__contact-phone {
+        @include textStyle($FS:8px, $FW:600, $LH:12px, $CLR:$color-white, $CASE:inherit, $MB:23px);
+    }
+    .footer__btn {
+        max-width: 294px;
+        @include display($items:center, $space:start, $gap:17px);
+        position: relative;
+        padding: 8px 14px 8px 60px;
+        border: 1px solid $footer-btn;
+        background-color: $footer-btn;
+        transition: all 0.3s linear;
+    
+        &:hover{
+            background-color: transparent;
+            color: $footer-bg;
+        }
+    }
+    .footer__btn-title{
+        max-width: 100%;
+        @include textStyle($FS:10px, $FW:600, $LH:15px, $CLR:$color-white, $CASE:inherit, $MB:0px);
+    }
+    .footer__text {
+        width: 161px;
+        margin: 0 auto;
+        @include textStyle($FS:10px, $FW:600, $LH:15px, $CLR:rgba(255, 255, 255, 1), $CASE:inherit, $MB:0px);
+        padding-bottom: 29px;
+        text-align: center;
+        opacity: 0.7;
+    }
+}

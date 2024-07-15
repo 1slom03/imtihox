@@ -482,14 +482,15 @@ h1, h2, h3, h4 {
 }
 
 .raboti__list {
+  width: 1239px;
   display: flex;
   align-items: center;
-  justify-content: start;
-  gap: 30px;
+  justify-content: space-between;
+  gap: 0px;
 }
 
 .raboti__item {
-  max-width: 393px;
+  width: 393px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.12);
   border-radius: 10px;
 }
@@ -550,7 +551,7 @@ h1, h2, h3, h4 {
   border-color: rgb(54, 55, 56);
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1276px) {
   .raboti-section {
     padding-bottom: 44px;
   }
@@ -573,6 +574,7 @@ h1, h2, h3, h4 {
     transition: all 0.3s linear;
   }
   .raboti__list {
+    width: 100%;
     display: flex;
     align-items: start;
     justify-content: start;
@@ -580,7 +582,7 @@ h1, h2, h3, h4 {
     flex-direction: column;
   }
   .raboti__item {
-    max-width: 100%;
+    width: 100%;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.12);
     border-radius: 10px;
   }
@@ -729,12 +731,12 @@ h1, h2, h3, h4 {
   transition: all 0.3s linear;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1200px) {
   .pastavki-section {
     padding-bottom: 125px;
   }
   .pastavki__list {
-    max-width: 690px;
+    max-width: 100%;
   }
   .pastavki__item {
     width: 100%;
@@ -744,7 +746,7 @@ h1, h2, h3, h4 {
     display: none;
   }
   .pastavki__item-content {
-    max-width: 100%;
+    width: 100%;
   }
   .pastavki__item-text {
     font-size: 16px;

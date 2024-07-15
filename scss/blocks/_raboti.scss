@@ -9,10 +9,11 @@
     @include textStyle($FS:16px, $FW:400, $LH:24px, $CLR:$clr-text, $CASE:inherit, $MB:56px);
 }
 .raboti__list {
-    @include display($items:center, $space:start, $gap:30px);
+    width: 1239px;
+    @include display($items:center, $space:space-between, $gap:0px);
 }
 .raboti__item {
-    max-width: 393px;
+    width: 393px;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.12);
     border-radius: 10px;
 }
@@ -47,7 +48,7 @@
 
 // ---------Tablet----------
 
-@media (max-width:850px){
+@media (max-width:1276px){
     .raboti-section{
         padding-bottom: 44px;
     }
@@ -58,11 +59,12 @@
         @include textStyle($FS:16px, $FW:400, $LH:24px, $CLR:$clr-text, $CASE:inherit, $MB:40px);
     }
     .raboti__list{
+        width: 100%;
         @include display($items:start, $space:start, $gap:30px);
         flex-direction: column;
     }
     .raboti__item{
-        max-width: 100%;
+        width: 100%;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.12);
         border-radius: 10px;
     }
@@ -77,7 +79,6 @@
         display: block;
         margin-bottom: 24px;
     }
-    
 }
 
 // ---------Mobile----------

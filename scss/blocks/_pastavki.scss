@@ -43,12 +43,12 @@
 
 
 // ----------Tablet---------
-@media (max-width:850px){
+@media (max-width:1200px){
     .pastavki-section{
         padding-bottom: 125px;
     }
     .pastavki__list{
-        max-width: 690px;
+        max-width: 100%;
     }
     .pastavki__item{
         width: 100%;
@@ -58,7 +58,7 @@
         display: none;
     }
     .pastavki__item-content{
-        max-width: 100%
+        width: 100%
     }
     .pastavki__item-text{
     @include textStyle($FS:16px, $FW:400, $LH:24px, $CLR:$clr-text, $CASE:inherit, $MB:0px);
